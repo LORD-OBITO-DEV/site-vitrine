@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><%= title || "BLACK HAT VPS" %></title>
+  <link href="/public/css/style.css" rel="stylesheet">
+  <link rel="icon" href="/public/assets/logo-placeholder.png">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="/"><img src="/public/assets/logo-placeholder.png" height="36" alt="logo"></a>
+      <a href="/" class="nav-link">Accueil</a>
+      <a href="/about" class="nav-link">Équipe</a>
+      <a href="/plans" class="nav-link">Acheter panneau</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-right">
+      <% if (!currentUser) { %>
+        <a href="/signup" class="btn">Commencer</a>
+        <a href="/login" class="btn ghost">Se connecter</a>
+      <% } else { %>
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="/logout" class="btn ghost">Déconnexion</a>
+      <% } %>
+    </div>
+  </nav>
+
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 BLACK HAT VPS — <a href="/cookies">Cookies</a> | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a>
+  </footer>
+
+  <script src="/public/js/main.js"></script>
+</body>
+</html>
