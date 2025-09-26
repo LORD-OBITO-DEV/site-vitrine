@@ -1,25 +1,22 @@
 {
-  "name": "blackhatvps-website",
+  "name": "blackhatvps-panel",
   "version": "1.0.0",
-  "description": "Site vitrine et panels Black Hat VPS 🚀",
-  "main": "index.js",
+  "description": "Site principal / panel - Black Hat VPS (demo)",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [
-    "VPS",
-    "panel",
-    "hosting",
-    "Node.js",
-    "Python",
-    "BlackHatVPS"
-  ],
-  "author": "Jean Stéphane Eliel (Lord Obito Dev)",
-  "license": "MIT",
   "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "dotenv": "^16.3.1"
+    "express-session": "^1.17.3",
+    "mongoose": "^7.3.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
