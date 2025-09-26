@@ -1,0 +1,27 @@
+<% layout('layout') -%>
+<h2>Mon Dashboard</h2>
+
+<div>
+  <p><strong>Email :</strong> <%= user.email %></p>
+  <p><strong>Points :</strong> <span id="userPoints"><%= user.points %></span></p>
+</div>
+
+<section>
+  <h3>Mes panneaux</h3>
+  <% if (user.panels && user.panels.length) { %>
+    <ul>
+      <% user.panels.forEach(p => { %>
+        <li>
+          <strong><%= p.name %></strong> — <%= p.plan %> — <%= p.memoryMB %>MB — <%= p.locked ? "Verrouillé":"Actif" %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>Aucun panneau pour le moment.</p>
+  <% } %>
+</section>
+
+<div style="margin-top:20px">
+  <button onclick="openAdWindow()" class="btn">Regarder pub (30s) → +2 points</button>
+  <a href="/plans" class="btn ghost">Acheter des points / plans</a>
+</div>
