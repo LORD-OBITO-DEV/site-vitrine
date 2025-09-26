@@ -1,0 +1,9 @@
+<% layout('layout') -%>
+<h2>S'inscrire</h2>
+<% if (typeof error !== 'undefined') { %><div class="error"><%= error %></div><% } %>
+<form method="post" action="/signup">
+  <input name="displayName" placeholder="Nom (affiché)" type="text">
+  <input name="email" placeholder="Email" type="email" required>
+  <input name="password" placeholder="Mot de passe" type="password" required>
+  <button class="btn">Créer un compte</button>
+</form>
