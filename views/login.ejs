@@ -1,0 +1,8 @@
+<% layout('layout') -%>
+<h2>Se connecter</h2>
+<% if (typeof error !== 'undefined') { %><div class="error"><%= error %></div><% } %>
+<form method="post" action="/login">
+  <input name="email" placeholder="Email" type="email" required>
+  <input name="password" placeholder="Mot de passe" type="password" required>
+  <button class="btn">Se connecter</button>
+</form>
