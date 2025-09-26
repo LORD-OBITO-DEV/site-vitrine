@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - BLACK HAT VPS 🚀</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; color: #212529; font-family: Arial, sans-serif; }
+    .hero { background: linear-gradient(135deg, #0d6efd, #000); color: #fff; padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; font-weight: bold; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-8px); }
+    .card-title { font-weight: bold; color: #0d6efd; }
+    .contact a { text-decoration: none; color: #000; }
+    .contact a:hover { color: #0d6efd; }
+    .footer { background-color: #000; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<%- include('header') %>
+
+<!-- Section Hero -->
+<section class="hero">
+  <h1>Notre Équipe</h1>
+  <p>Découvrez les personnes qui construisent l’avenir avec BLACK HAT VPS.</p>
+</section>
+
+<div class="container my-5">
+
+  <!-- Chef -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-6">
+      <div class="card p-4 text-center">
+        <h3 class="card-title">LORD OBITO DEV</h3>
+        <p>Fondateur & CEO</p>
+        <div class="contact">
+          <p>Telegram: <a href="https://t.me/LORD_OBITO_DEV" target="_blank">@LORD_OBITO_DEV</a></p>
+          <p>WhatsApp: <a href="https://wa.me/2250712668494" target="_blank">+2250712668494</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sous-Chef -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-5">
+      <div class="card p-4 text-center">
+        <h3 class="card-title">LORD MINATO DEV</h3>
+        <p>Sous-Chef / COO</p>
+        <div class="contact">
+          <p>WhatsApp: <a href="https://wa.me/242068906671" target="_blank">+242 06 890 6671</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Membres -->
+  <h2 class="text-center mb-4">Membres</h2>
+  <div class="row g-4">
+    <% team.forEach(member => { %>
+      <div class="col-md-4">
+        <div class="card p-4 text-center">
+          <h4 class="card-title"><%= member.name %></h4>
+          <p><%= member.role %></p>
+          <% if(member.telegram) { %>
+            <p>Telegram: <a href="<%= member.telegram %>" target="_blank"><%= member.telegram_display %></a></p>
+          <% } %>
+          <% if(member.whatsapp) { %>
+            <p>WhatsApp: <a href="<%= member.whatsapp %>" target="_blank"><%= member.whatsapp_display %></a></p>
+          <% } %>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('footer') %>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
