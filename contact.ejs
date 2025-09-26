@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - BLACK HAT VPS 🚀</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; color: #212529; font-family: Arial, sans-serif; }
+    .hero { background: linear-gradient(135deg, #0d6efd, #000); color: #fff; padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; font-weight: bold; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-8px); }
+    .form-control { border-radius: 8px; }
+    .btn-custom { background-color: #0d6efd; color: #fff; border-radius: 30px; padding: 10px 25px; font-weight: bold; transition: 0.3s; }
+    .btn-custom:hover { background-color: #0056b3; color: #fff; }
+    .footer { background-color: #000; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<%- include('header') %>
+
+<!-- Section Hero -->
+<section class="hero">
+  <h1>Contactez-nous</h1>
+  <p>Nous sommes là pour répondre à vos questions ou demandes concernant BLACK HAT VPS.</p>
+</section>
+
+<div class="container my-5">
+
+  <!-- Formulaire de contact -->
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="card p-4">
+        <form action="/contact" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Sujet</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-custom">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact direct -->
+  <div class="row text-center mt-5">
+    <div class="col-md-4">
+      <h5>Email</h5>
+      <p><a href="mailto:blackhatvps0@gmail.com">blackhatvps0@gmail.com</a></p>
+    </div>
+    <div class="col-md-4">
+      <h5>WhatsApp</h5>
+      <p><a href="https://wa.me/2250712668494" target="_blank">+225 071 266 8494</a></p>
+    </div>
+    <div class="col-md-4">
+      <h5>Telegram</h5>
+      <p><a href="https://t.me/LORD_OBITO_DEV" target="_blank">@LORD_OBITO_DEV</a></p>
+    </div>
+  </div>
+
+  <!-- Bloc publicitaire Adstera -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8 text-center">
+      <!-- Exemple de script Adstera Smartlink -->
+      <script type="text/javascript" src="//pl27729275.revenuecpmgate.com/df/9e/b7/df9eb7241a06fb49bfc98b87a3f64306.js"></script>
+    </div>
+  </div>
+
+</div>
+
+<%- include('footer') %>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
